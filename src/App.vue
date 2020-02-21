@@ -8,6 +8,12 @@
         </div>
       </section>
       <section class="section">
+        <p class="section__title">Locations</p>
+        <div class="section__inner">
+          <Locations />
+        </div>
+      </section>
+      <section class="section">
         <p class="section__title">Actions</p>
         <div class="section__inner">
           <Actions />
@@ -36,10 +42,12 @@ import Progression from "./components/Progression";
 import Actions from "./components/Actions";
 import Heros from "./components/Heros";
 import Inventory from "./components/Inventory";
+import Locations from "./components/Locations";
 
 export default {
   name: "App",
   components: {
+    Locations,
     Progression,
     Actions,
     Heros,

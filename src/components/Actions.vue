@@ -1,11 +1,23 @@
 <template>
-  <div></div>
+  <div>
+    <div v-for="action in actionsByLocation(activeLocation.id)" :key="action.id">
+      <p>{{ action.name }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: "Actions",
-  props: {}
+  props: {},
+  computed: {
+    ...mapGetters({
+      activeLocation: 'locations/getActiveLocation',
+      actionsByLocation: 'tasks/getActionsByLocation'
+    })
+  }
 };
 </script>
 
